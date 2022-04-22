@@ -17,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jpg$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -44,7 +44,7 @@ module.exports = {
       jQuery: 'jquery',
     }),
     new BundleAnalyzerPlugin({
-      analyzerMode: 'static', // the report outputs to an HTML file in the dist folder
+      analyzerMode: 'disable', // the report outputs to an HTML file in the dist folder, can be set to 'static' or 'disable'
     }),
   ],
   mode: 'development',
